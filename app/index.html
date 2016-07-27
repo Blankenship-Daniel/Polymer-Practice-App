@@ -15,8 +15,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Polymer Starter Kit">
-  <title>Polymer Starter Kit</title>
+  <meta name="generator" content="theblankenship.com">
+  <title>theblankenship.com</title>
 
   <!-- Place favicon.ico in the `app/` directory -->
 
@@ -54,6 +54,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!-- Because this project uses vulcanize this should be your only html import
        in this file. All other imports should go in elements.html -->
   <link rel="import" href="elements/elements.html">
+  <link rel="import" href="bower_components/iron-icons/maps-icons.html">
 
   <!-- For shared styles, shared-styles.html import in elements.html -->
   <style is="custom-style" include="shared-styles"></style>
@@ -72,7 +73,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Drawer Toolbar -->
         <paper-toolbar id="drawerToolbar">
-          <span class="menu-name">Menu</span>
+          <iron-icon icon="maps:terrain"></iron-icon>
+          <span class="menu-name">theblankenship.com</span>
         </paper-toolbar>
 
         <!-- Drawer Content -->
@@ -91,6 +93,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <iron-icon icon="mail"></iron-icon>
             <span>Contact</span>
           </a>
+
+          <a data-route="books" href="{{baseUrl}}books">
+            <iron-icon icon="book"></iron-icon>
+            <span>Books</span>
+          </a>
         </paper-menu>
       </paper-scroll-header-panel>
 
@@ -108,12 +115,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
           <!-- Application name -->
           <div class="middle middle-container">
-            <div class="app-name">Polymer Starter Kit</div>
+            <div class="app-name">Portfolio</div>
           </div>
 
           <!-- Application sub title -->
           <div class="bottom bottom-container">
-            <div class="bottom-title">The future of the web today</div>
+            <div class="bottom-title">A comprehensive list of different web projects that Daniel Blankenship has worked on</div>
           </div>
         </paper-toolbar>
 
@@ -178,6 +185,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 <p>This is the contact section</p>
               </paper-material>
             </section>
+
+            <section data-route="books">
+              <paper-material elevation="1">
+                <p>Hello, World!</p>
+              </paper-material>
+            </section>
+
           </iron-pages>
         </div>
       </paper-scroll-header-panel>
